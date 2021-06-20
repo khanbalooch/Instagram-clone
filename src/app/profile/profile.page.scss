@@ -1,0 +1,21 @@
+.user-image-wrapper{
+    border-radius: 50%;
+    // border: 2px solid lightcoral;
+    height: 100px;
+    img{
+      width: 100px;
+      height: 100%;
+      border-radius: 50%;
+      border: 2px solid white;
+      max-width: none;
+    }
+  }
+
+  .stats{
+      padding-top: 35px;
+  }
+  .description{
+    padding: 5px;
+    margin: 10px;
+    
+  }

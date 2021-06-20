@@ -1,0 +1,66 @@
+<ion-card class="feed-card">
+  <ion-card-content  class="feed-user-wrapper">
+    <div class="ion-align-items-center user-image-wrapper">
+      <img [src]="postData.picture.large">
+    </div>
+    <div (click)="gotoProfile()" class="user-details">
+      <p class="user-name">{{postData.name.first}}  {{postData.name.last}}</p>
+      <p class="user-place">{{postData.location.city}} {{postData.location.country}}</p>
+    </div>
+    
+    <ion-buttons slot="end">
+      <ion-button (click)="presentActionSheet(postData)" >
+        <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-card-content>
+  <div class="feed-slides-wrapper">
+
+     <!-- <ion-slides pager="true" [options]="slideOpts" class="feed-slides"> -->
+      <!-- <ion-slide> -->
+        <img [src]="postData.post.download_url"/>
+      <!-- </ion-slide> -->
+    <!-- </ion-slides> -->
+
+    <div class="feed-btn-wrapper">
+      <ion-buttons class="ion-float-left">
+        <ion-button *ngIf="!isLiked" (click)="isLiked = !isLiked">
+          <ion-icon  name="heart-outline"></ion-icon>
+        </ion-button>
+        <ion-button *ngIf="isLiked" (click)="isLiked = !isLiked">
+          <ion-icon class="red-icon"  name="heart"></ion-icon>
+        </ion-button>
+        <ion-button *ngIf="!fullScreenMode" (click)="gotoCommentPage()">
+          <ion-icon  name="chatbubbles-outline"></ion-icon>
+        </ion-button>
+        <ion-button *ngIf="!fullScreenMode" (click)="openShareActionSheet()">
+          <ion-icon name="paper-plane-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+
+      <ion-buttons class="ion-float-right">
+        <ion-button *ngIf="!isBookmarked" (click)="isBookmarked = !isBookmarked">
+          <ion-icon  name="bookmark-outline"></ion-icon>
+        </ion-button>
+        <ion-button *ngIf="isBookmarked" (click)="isBookmarked = !isBookmarked">
+          <ion-icon name="bookmark"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+  </div>
+
+
+  <ion-card-content class="feed-details-container">
+    <p> <strong>{{postData.registered.age}} likes</strong> </p>
+    <p class="user-given-details">
+      <ion-avatar>
+        <img src="https://picsum.photos/400" >
+      </ion-avatar>
+      <strong class="user-name">{{postData.name.first}} {{postData.name.last}} </strong>
+      <span class="feed-text">lorem ipsum</span>
+      <span class="grey-text"> more</span>
+    </p>
+    <p class="all-comments"> <span class="grey-text">View All Comments</span></p>
+    <p class="post-time"> <span class="grey-text">9:00 AM</span></p>
+  </ion-card-content>
+</ion-card>
