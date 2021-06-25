@@ -10,4 +10,4 @@ A cross platform Instagram clone app built on ionic (v6.xx)
 Profit. 🎉
 
 # App Preview
-!(https://drive.google.com/file/d/1Pbq6rjTrl6AbFVMHa8P-qQeR88nURjMg/view?usp=sharing)
+![image](https://user-images.githubusercontent.com/18024987/123467903-796aee00-d60a-11eb-82db-aff6fa558747.png)
