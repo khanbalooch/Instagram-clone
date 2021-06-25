@@ -30,3 +30,10 @@ Profile Page Action Sheet
 
 Comment on Post Page
 ![image](https://user-images.githubusercontent.com/18024987/123468712-97851e00-d60b-11eb-92ae-c57328b8f38c.png)
+
+# Deployment
+
+## Android
+Run ionic cordova run android --prod
+## iOS
+Run ionic cordova run ios --prod
